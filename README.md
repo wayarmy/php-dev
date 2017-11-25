@@ -33,6 +33,6 @@ cp -R $SOURCE_CODE php-dev/
 
 # Install more php extensions
 
-- Add new command to Dockerfile after read carefully the php docs: ![PHP Image Docker docs](https://hub.docker.com/_/php/)
+- Add new command to Dockerfile after read carefully the php docs: [PHP Image Docker docs](https://hub.docker.com/_/php/)
 
 # Let's enjoy your code

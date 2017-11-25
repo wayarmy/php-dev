@@ -1,1 +1,0 @@
-![PHP Image Docker docs](https://hub.docker.com/_/php/)
