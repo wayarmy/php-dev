@@ -1,0 +1,26 @@
+version: '2'
+services:
+  php-dev:
+    container_name: php-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - $PWD:/var/www/html
+    ports:
+      - "8000:80"
+    links:
+      - database:mysql
+
+  database:
+    container_name: mysql_dev
+    image: mysql:latest
+    restart: always
+    volumes:
+      - $PWD/mysql-dev:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=php-dev
+      - MYSQL_USER=php-dev
+      - MYSQL_PASSWORD=phppassword
+      - MYSQL_ROOT_PASSWORD=mysqlrootpassword
